@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Enter 1 - 10 Number</p>
+
+    <label>Select a number:</label>
+
+    <select id="text">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+
+    </select>
+
+
+    <input type="button" value="Enter" id="enter">
+
+
+
+
+    <script type="text/javascript">
+
+
+
+        var gessNum = Math.floor(Math.random() * 11);
+
+
+        document.getElementById("enter").onclick = function () {
+
+
+            var entNum = document.getElementById("text").value;
+
+            var guessCount = 1;
+
+            var gotIt = false;
+
+            while (gotIt == false) {
+
+                var guessNum = Math.floor(Math.random() * 11);
+
+                if (guessNum == entNum) {
+                    alert("Guess Count is " + guessCount + "\nGuess Num = " + guessNum);
+                    gotIt = true;
+
+                } else {
+                    guessCount++;
+
+                }
+
+
+
+
+
+
+            }
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
